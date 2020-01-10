@@ -6,16 +6,44 @@
 var listaInvitati = ['Jacopo', 'Roberta', 'Giulia', 'Nathan', 'Marco'];
 var nomeUtente = prompt('Qual è il tuo nome?');
 
-var nomeUtentePresente = false;
+// metodo 1 senza flag(vero/falso)
+// var messaggio = 'Pussa via';
+//
+// for (var i = 0; i < listaInvitati.length; i++) {
+//   var nomeCorrente = listaInvitati[i];
+//   if (nomeUtente == nomeCorrente) {
+//     messaggio = 'Welcome to paradise';
+//   }
+// }
+// alert(messaggio);
 
-for (var i = 0; i < listaInvitati.length; i++) {
+
+// metodo 2 con flag
+// var nomeUtentePresente = false;
+//
+// for (var i = 0; i < listaInvitati.length; i++) {
+//   var nomeCorrente = listaInvitati[i];
+//   if (nomeUtente == nomeCorrente) {
+//     nomeUtentePresente = true;
+//   }
+// }
+//  if (nomeUtentePresente == true) {
+//    alert('Benvenuto al party!');
+//  } else {
+//    alert('Siamo spiacenti di comunicarti che il tuo nome non è presente nella lista invitati');
+//  }
+
+
+// metodo 3 con while
+
+var messaggio = 'Pussa via!';
+var i = 0;
+
+while (i < listaInvitati.length) {
   var nomeCorrente = listaInvitati[i];
   if (nomeUtente == nomeCorrente) {
-    nomeUtentePresente = true;
+    messaggio = 'Welcome to paradise!';
   }
+  i++;
 }
-if (nomeUtentePresente == true) {
-   alert('Benvenuto al party!');
- } else {
-   alert('Siamo spiacenti di comunicarti che il tuo nome non è presente nella lista invitati');
- }
+alert(messaggio);
